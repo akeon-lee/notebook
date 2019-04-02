@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "main",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "c++/main.cpp",
+        "-o",
+        "c++/main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\MinGW\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\MinGW\\bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "cpp.exe build active file",
+      "command": "C:\\MinGW\\bin\\cpp.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\MinGW\\bin"
+      }
+    }
+  ]
+}
